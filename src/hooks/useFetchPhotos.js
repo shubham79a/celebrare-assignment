@@ -20,7 +20,7 @@ function useFetchPhotos() {
           signal: controller.signal,
         })
         setPhotos(response.data)
-      } catch (err) {
+      } catch {
         if (!controller.signal.aborted) {
           setError('Unable to load photos. Please try again.')
         }
